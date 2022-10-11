@@ -2,7 +2,7 @@ var Typer = {
   text: "",
   accessCountimer: null,
   index: 0,
-  speed: 4,
+  speed: 2,
   file: "",
   accessCount: 0,
   deniedCount: 0,
@@ -103,7 +103,7 @@ var timer = setInterval("t();", 30);
 function t() {
   Typer.addText({ keyCode: 123748 });
 
-  //if (Typer.index > Typer.text.length) {
-    //clearInterval(timer);
-  //}
+  if (Typer.index > Typer.text.length) {
+    clearInterval(timer);
+  }
 }
