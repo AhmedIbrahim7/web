@@ -99,7 +99,7 @@ Typer.speed = 3;
 Typer.file = "info.html";
 Typer.init();
 
-var timer = setInterval("t();", 30);
+var timer = setInterval("t();", 120);
 function t() {
   Typer.addText({ keyCode: 123748 });
 
