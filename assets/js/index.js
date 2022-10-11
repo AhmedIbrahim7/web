@@ -2,14 +2,14 @@ var Typer = {
   text: "",
   accessCountimer: null,
   index: 0,
-  speed: 2,
+  speed: 4,
   file: "",
   accessCount: 0,
   deniedCount: 0,
   init: function () {
     accessCountimer = setInterval(function () {
       Typer.updLstChr();
-    }, 1000);
+    }, 500);
     $.get(Typer.file, function (data) {
       Typer.text = data;
       Typer.text = Typer.text.slice(0, Typer.text.length - 1);
@@ -99,7 +99,7 @@ Typer.speed = 3;
 Typer.file = "info.html";
 Typer.init();
 
-var timer = setInterval("t();", 25);
+var timer = setInterval("t();", 30);
 function t() {
   Typer.addText({ keyCode: 123748 });
 
