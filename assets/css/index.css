@@ -48,7 +48,9 @@ a {
     color: black;
   }
 }
+<style>
 .background-image {
     width: 400px;
     background: url("assets/bg.jpg") 50% 50%;
 }
+</style>
