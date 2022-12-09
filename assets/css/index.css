@@ -50,7 +50,11 @@ a {
 }
 <style>
 .background-image {
-    width: 400px;
     background: url("assets/bg.jpg") 50% 50%;
-}
+    border: 2px solid black;
+    padding: 25px;
+    background: url(mountain.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
 </style>
