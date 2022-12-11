@@ -50,8 +50,6 @@ a {
 }
 <style>
 .background-image {
-    border: 2px solid black;
-    padding: 25px;
     background-repeat: repeat-y;
     background-size: 100% 100%;
   }
