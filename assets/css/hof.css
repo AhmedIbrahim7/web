@@ -1,6 +1,8 @@
 /* Basic Styling */
 body{
-  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 100px;
+  font-family: "Lucida Console", "Courier New", monospace 5rem / 1 '';
+  font-weight: 900;
   background-color: black
 }
 .text{
