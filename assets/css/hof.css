@@ -24,3 +24,12 @@ body{
   to{
     background-position: 100%;
   }
+
+<style>
+.background-image {
+    background-image:url('assets/ghjbj.gif');
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+</style>
