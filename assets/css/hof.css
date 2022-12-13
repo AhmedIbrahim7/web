@@ -12,8 +12,6 @@ body{
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-size: 400%;
-  background-position: -400%;
   
   animation: animatedText 6.5s infinite alternate-reverse;
 }
@@ -28,8 +26,7 @@ body{
 <style>
 .background-image {
     background-image:url('assets/ghjbj.gif');
-    background-size:cover;
-    background-repeat: no-repeat;
+    background-size:contain;
     background-attachment: fixed;
   }
 </style>
