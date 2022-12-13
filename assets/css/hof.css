@@ -1,6 +1,6 @@
 /* Basic Styling */
 body{
-  font: normal bold 5rem / 1 '';
+  font-family: "Lucida Console", "Courier New", monospace;
   background-color: black
 }
 .text{
