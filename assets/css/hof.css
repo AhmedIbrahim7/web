@@ -28,7 +28,7 @@ body{
 <style>
 .background-image {
     background-image:url('assets/ghjbj.gif');
-    background-size:contain;
+    background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
