@@ -1,30 +1,4 @@
-/* Basic Styling */
-body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font: normal bold 5rem / 1 '';
-  background-color: black
-}
-.text{
-  background-image: url(https://scitechdaily.com/images/White-Dwarf-Star-With-Planet.jpg);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 400%;
-  background-position: -400%;
-  
-  animation: animatedText 6.5s infinite alternate-reverse;
-}
-@keyframes animatedText{
-  from{
-    background-position: 0%;
-  }
-  to{
-    background-position: 100%;
-  }
-
+body { background-color: #000; }
 
 #console {
   font-family: courier, monospace;
