@@ -1,29 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Calligraffitti&display=swap');
-
-divv {
-  font-family: 'Calligraffitti', cursive;
-  font-weight: 700;
-  font-size: 8rem;
-  position: absolute;
-  text-shadow: -15px 5px 20px #ced0d3;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  letter-spacing: 0.05em;
-  text-align: center;
-  color: #F9f1cc;
-  text-shadow: 5px 5px 0px #FFB650, 
-    10px 10px 0px #FFD662, 
-    15px 15px 0px  #FF80BF, 
-    20px 20px 0px #EF5097, 
-    25px 25px 0px #6868AC, 
-    30px 30px 0px #90B1E0;
+/* Basic Styling */
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font: normal bold 5rem / 1 '';
+  background-color: black
 }
-
-
-body {
-  background-color: #000;
+.text{
+  background-image: url(https://scitechdaily.com/images/White-Dwarf-Star-With-Planet.jpg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  background-position: -400%;
+  
+  animation: animatedText 6.5s infinite alternate-reverse;
 }
+@keyframes animatedText{
+  from{
+    background-position: 0%;
+  }
+  to{
+    background-position: 100%;
+  }
+
+
 #console {
   font-family: courier, monospace;
   color: #fff;
@@ -70,6 +72,7 @@ a {
     color: black;
   }
 }
+
 <style>
 .background-image {
     background-image:url('assets/ghjbj.gif');
