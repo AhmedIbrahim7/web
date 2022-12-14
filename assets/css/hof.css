@@ -11,7 +11,7 @@ body{
   background-clip: text;
   -webkit-text-fill-color: transparent;
   
-  animation: animatedText 6.5s infinite alternate-reverse;
+  animation: animatedText 3.5s infinite alternate-reverse;
 }
 @keyframes animatedText{
   from{
