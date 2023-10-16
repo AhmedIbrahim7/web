@@ -4,25 +4,24 @@ var Typer = {
   index: 0,
   speed: 3,
   file: "",
+  currentText: "",
   accessCount: 0,
   deniedCount: 0,
   init: function () {
-    accessCountimer = setInterval(function () {
+    this.accessCountimer = setInterval(function () {
       Typer.updLstChr();
     }, 500);
-    $.get(Typer.file, function (data) {
-      Typer.text = data;
-      Typer.text = Typer.text.slice(0, Typer.text.length - 1);
+    $.get(this.file, function (data) {
+      Typer.text = data.slice(0, -1);
     });
   },
-
+  
   content: function () {
-    return $("#console").html();
+    return this.currentText;
   },
 
   write: function (str) {
-    $("#console").append(str);
-    return false;
+    this.currentText += str;
   },
 
   addText: function (key) {
@@ -71,16 +70,23 @@ var Typer = {
   },
 
   updLstChr: function () {
-    var cont = this.content();
+    if (this.currentText.endsWith("|")) {
+      this.currentText = this.currentText.slice(0, -1);
+    } else {
+      this.write("|");
+    }
 
-    if (cont.substring(cont.length - 1, cont.length) == "|")
-      $("#console").html(
-        $("#console")
-          .html()
-          .substring(0, cont.length - 1)
-      );
-    else this.write("|"); // else write it
+    // Update the DOM in one go
+    $("#console").html(this.currentText);
   },
+  
+  animateText: function() {
+    this.addText({ keyCode: 123748 });
+
+    if (this.index <= this.text.length) {
+      requestAnimationFrame(this.animateText.bind(this));
+    }
+  }
 };
 
 function replaceUrls(text) {
@@ -95,15 +101,15 @@ function replaceUrls(text) {
   }
 }
 
+// var timer = setInterval("t();", 30);
+// function t() {
+//   Typer.addText({ keyCode: 123748 });
+
+//   if (Typer.index > Typer.text.length) {
+//     clearInterval(timer);
+//   }
+// }
 Typer.speed = 3;
 Typer.file = "info.html";
 Typer.init();
-
-var timer = setInterval("t();", 30);
-function t() {
-  Typer.addText({ keyCode: 123748 });
-
-  if (Typer.index > Typer.text.length) {
-    clearInterval(timer);
-  }
-}
+Typer.animateText();
