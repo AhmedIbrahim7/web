@@ -1,4 +1,4 @@
-body { 
+/* body { 
   background-color: #000; 
 }
 
@@ -35,6 +35,36 @@ a {
 
 #op {
   color: #888888;
+} */
+
+body {
+    background-color: #1e1e1e;
+    color: #0bc;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+#prompt {
+    color: #0bc;
+}
+
+#command {
+    color: #FFF;
+}
+
+a {
+    color: #FDBD01;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p, a {
+    margin: 0.5em 0;
 }
 
 @keyframes change {
@@ -48,4 +78,3 @@ a {
     color: black;
   }
 }
-
