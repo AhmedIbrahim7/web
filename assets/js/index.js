@@ -84,7 +84,7 @@ var Typer = {
       $("#console").html(consoleContent + "|");
     }
   }
-}
+},
 
 
   
