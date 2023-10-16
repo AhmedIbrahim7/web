@@ -85,8 +85,6 @@ var Typer = {
     }
   }
 },
-
-
   
   animateText: function() {
     this.addText({ keyCode: 123748 });
