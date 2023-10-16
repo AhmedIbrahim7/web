@@ -70,15 +70,15 @@ var Typer = {
   },
 
   updLstChr: function () {
-    if (this.currentText.endsWith("|")) {
-      this.currentText = this.currentText.slice(0, -1);
-    } else {
-      this.write("|");
-    }
+  var consoleContent = $("#console").html();
 
-    // Update the DOM in one go
-    $("#console").html(this.currentText);
-  },
+  if (consoleContent.endsWith("|")) {
+    $("#console").html(consoleContent.slice(0, -1));
+  } else {
+    $("#console").html(consoleContent + "|");
+  }
+}
+
   
   animateText: function() {
     this.addText({ keyCode: 123748 });
