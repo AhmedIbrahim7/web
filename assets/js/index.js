@@ -72,12 +72,20 @@ var Typer = {
   updLstChr: function () {
   var consoleContent = $("#console").html();
 
-  if (consoleContent.endsWith("|")) {
-    $("#console").html(consoleContent.slice(0, -1));
+  // Check if animation is done
+  if (Typer.index >= Typer.text.length) {
+    if (!consoleContent.endsWith("|")) {
+      $("#console").html(consoleContent + "|");
+    }
   } else {
-    $("#console").html(consoleContent + "|");
+    if (consoleContent.endsWith("|")) {
+      $("#console").html(consoleContent.slice(0, -1));
+    } else {
+      $("#console").html(consoleContent + "|");
+    }
   }
 }
+
 
   
   animateText: function() {
