@@ -70,21 +70,15 @@ var Typer = {
   },
 
   updLstChr: function () {
-  var consoleContent = $("#console").html();
+    var consoleContent = $("#console").html();
 
-  // Check if animation is done
-  if (Typer.index >= Typer.text.length) {
-    if (!consoleContent.endsWith("|")) {
-      $("#console").html(consoleContent + "|");
-    }
-  } else {
     if (consoleContent.endsWith("|")) {
-      $("#console").html(consoleContent.slice(0, -1));
+        $("#console").html(consoleContent.slice(0, -1));
     } else {
-      $("#console").html(consoleContent + "|");
+        $("#console").html(consoleContent + "|");
     }
-  }
 },
+
   
   animateText: function() {
     this.addText({ keyCode: 123748 });
