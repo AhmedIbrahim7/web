@@ -1,4 +1,4 @@
-/* body { 
+body { 
   background-color: #000; 
 }
 
@@ -35,9 +35,9 @@ a {
 
 #op {
   color: #888888;
-} */
+}
 
-body {
+/* body {
     background-color: #1e1e1e;
     color: #0bc;
     font-family: 'Courier New', Courier, monospace;
@@ -66,7 +66,7 @@ a:hover {
 p, a {
     margin: 0.5em 0;
 }
-
+ */
 @keyframes change {
   0% {
     color: #0f0;
