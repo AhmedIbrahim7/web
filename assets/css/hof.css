@@ -1,30 +1,130 @@
 /* Basic Styling */
-body{
+body {
   font-size: 100px;
-  font-family: "Lucida Console", "Courier New", monospace 5rem / 1 '';
+  font-family: "Lucida Console", "Courier New", monospace;
   font-weight: 900;
-  background-color: black
+  background-color: black;
 }
-.text{
+
+.text {
   background-image: url(https://scitechdaily.com/images/White-Dwarf-Star-With-Planet.jpg);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  
   animation: animatedText 3.5s infinite alternate-reverse;
 }
-@keyframes animatedText{
-  from{
+
+@keyframes animatedText {
+  from {
     background-position: 0%;
   }
-  to{
+  to {
     background-position: 100%;
   }
+}
 
-<style>
 .background-image {
-    background-image:url('assets/ghjbj.gif');
-    background-size:contain;
-    background-attachment: fixed;
+  background-image: url('assets/ghjbj.gif');
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+/* Fancy styling for the "Big Sooz" entry */
+.tg-fancy {
+  background: linear-gradient(-45deg, #ff7e5f, #feb47b, #86A8E7, #91EAE4);
+  background-size: 400% 400%;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  font-size: larger;
+  animation: gradient 10s ease infinite;
+  border: 2px solid #fff;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
   }
-</style>
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Table Styling */
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0px auto;
+}
+
+.tg td {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.tg th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.tg .tg-8jgo {
+  border-color: #ffffff;
+  text-align: center;
+  vertical-align: top;
+}
+
+.tg .tg-js80 {
+  background-color: #343434;
+  border-color: #ffffff;
+  color: #ffffff;
+  font-family: "Arial Black", Gadget, sans-serif !important;
+  font-size: medium;
+  font-weight: bold;
+  position: -webkit-sticky;
+  position: sticky;
+  text-align: center;
+  top: -1px;
+  vertical-align: top;
+  will-change: transform;
+}
+
+.tg .tg-l19u {
+  background-color: #e8b430;
+  border-color: #ffffff;
+  color: #4f1b84;
+  font-family: Verdana, Geneva, sans-serif !important;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: top;
+}
+
+/* Responsive design for mobile screens */
+@media screen and (max-width: 767px) {
+  .tg {
+    width: auto !important;
+  }
+  .tg col {
+    width: auto !important;
+  }
+  .tg-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: auto 0px;
+  }
+}
