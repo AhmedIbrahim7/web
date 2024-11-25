@@ -24,9 +24,10 @@ body {
 }
 
 .background-image {
-  background-image: url('assets/ghjbj.gif');
+  background-image: url('../ghjbj.gif');
   background-size: contain;
   background-attachment: fixed;
+  background-color: red; /* Temporary background color for testing */
 }
 
 /* Fancy styling for the "Big Sooz" entry */
